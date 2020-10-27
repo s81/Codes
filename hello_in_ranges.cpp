@@ -1,25 +1,37 @@
 #include <iostream>
-#include <vector>
-
-auto endline = []() -> void { std::cout << '\n'; };
+#include <algorithm>
+#include <ranges>
 
 int main()
 {
-    std::vector<std::string> names{
-        "Majeda", "Samer", "Shatha",
-        "Adham", "Sahem", "Fayek",
-        "Lamar", "Essa", "Miral",
-        "Natasha", "William"};
+    std::string names[] =
+        {
+            "Majeda", "Samer", "Shatha", "Adham", "Sahem",
+            "Fayek", "Lamar", "Essa", "Miral",
+            "Natasha", "William"};
 
-    std::ranges::for_each(names, [](auto item) { std::cout << item << ' '; });
-    endline();
+    for (auto name : names)
+        std::cout << name << ' ';
+    std::cout << '\n';
+    std::cout << '\n';
 
-    std::vector<uint_fast64_t> salaries_in_cents{
-        1123'23, 3283'18, 4567'56,
-        2389'54, 5456'68, 4523'76,
-        4567'86, 9089'90, 5817'45,
-        4751'53, 1495'51};
+    double salaries[] =
+        {
+            1123.23, 3283.18, 4567.56, 2389.54,
+            5456.68, 4523.76, 4567.86, 9089.90,
+            5817.45, 4751.53, 1495.51};
 
-    std::ranges::for_each(salaries_in_cents, [](auto item) { std::cout << std:: << item << ' '; });
-    endline();
+    for (auto salary : salaries)
+        std::cout << salary << ' ';
+    std::cout << '\n';
+    std::cout << '\n';
+
+    auto updated_salaries = salaries | std::views::transform([](auto salary) { return salary * 1.35; });
+
+    auto sum = salaries | std::ranges::
+
+                                  for (auto new_salary : updated_salaries) std::cout
+                              << new_salary << ' ';
+    std::cout << '\n';
+    std::cout << '\n';
 }
