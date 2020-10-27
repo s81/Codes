@@ -21,3 +21,8 @@
    
 
     // for(auto [name, salary] : employees) std::cout << name << " - " << salary << '\n' ;
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
