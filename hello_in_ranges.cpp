@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 
-auto endline = []() -> { std::cout << '\n'; }; //== !=
+auto endline = []() -> void { std::cout << '\n'; }; //== !=
 
 int main()
 {
