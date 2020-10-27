@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <map>
 #include <algorithm>
-#include <numeric>
 
 auto endline = []() { std::cout << '\n'; };
 
