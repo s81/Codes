@@ -2,16 +2,16 @@
 #include <algorithm>
 
 auto endline = []() -> void { std::cout << '\n'; }; //== !=
-
+using  R = std::ranges;
 int main()
 {
     std::string names[] = {...};
 
-    std::ranges::for_each(names, [](auto item) { std::cout << item << ' '; });
+    R::for_each(names, [](auto item) { std::cout << item << ' '; });
     endline();
 
-    std::ranges::sort(names);
-    std::ranges::for_each(names, [](auto item) { std::cout << item << ' '; });
+    R::sort(names);
+    R::for_each(names, [](auto item) { std::cout << item << ' '; });
     endline();
 
     int salaries_in_cents[] = {...};
